@@ -1,0 +1,462 @@
+global:
+
+  scrape_interval: 5s
+
+  evaluation_interval: 5s
+
+scrape_configs:
+
+  - job_name: 'prometheus'
+
+    static_configs:
+
+    - targets: ['172.16.0.70:9090']
+
+      labels:
+
+        alias: 'prometheus'
+
+  - job_name: 'EPMTEST-70'
+
+    static_configs:
+
+    - targets: ['172.16.0.70:8080']
+
+      labels:
+
+        alias: 'cadvisor'
+
+  - job_name: 'EPM-TEST-70'
+
+    static_configs:
+
+    - targets: ['172.16.0.70:9100']
+
+      labels:
+
+        alias: 'node-exporter'
+
+  - job_name: 'EPMTEST-DB-69'
+
+    static_configs:
+
+    - targets: ['172.16.0.69:8084']
+
+      labels:
+
+        alias: 'cadvisor'
+
+  - job_name: 'EPMQA-DEV-68'
+
+    static_configs:
+
+    - targets: ['172.16.0.68:8084']
+
+      labels:
+
+        alias: 'cadvisor'
+
+  - job_name: 'EPMQA2-177'
+
+    static_configs:
+
+    - targets: ['101.53.142.177:8084']
+
+      labels:
+
+        alias: 'cadvisor'
+
+  - job_name: 'DOCKER-3ASSET-203'
+
+    static_configs:
+
+    - targets: ['164.52.201.203:8084']
+
+      labels:
+
+        alias: 'cadvisor'
+
+  - job_name: 'DOCKER-3-ASSET-203'
+
+    static_configs:
+
+    - targets: ['164.52.201.203:9104']
+
+      labels:
+
+        alias: 'node-exporter'
+
+  - job_name: 'EPM-QA-DEV-68'
+
+    static_configs:
+
+    - targets: ['172.16.0.68:9104']
+
+      labels:
+
+        alias: 'node-exporter'
+
+  - job_name: 'EPM-TEST-DB-69'
+
+    static_configs:
+
+    - targets: ['172.16.0.69:9104']
+
+      labels:
+
+        alias: 'node-exporter'
+  
+  - job_name: 'EPM-QA2-177'
+
+    static_configs:
+
+    - targets: ['101.53.142.177:9104']
+
+      labels:
+
+        alias: 'node-exporter'
+  
+  - job_name: 'EPM-QA-DB-173'
+
+    static_configs:
+
+    - targets: ['164.52.216.173:9104']
+
+      labels:
+
+        alias: 'node-exporter'
+
+  - job_name: 'TEST1-SOLAR-65'
+
+    static_configs:
+
+    - targets: ['172.16.0.65:9104']
+
+      labels:
+
+        alias: 'node-exporter'
+   
+  - job_name: 'EPM-QA1-42'
+
+    static_configs:
+
+    - targets: ['101.53.142.42:8084']
+
+      labels:
+
+        alias: 'cadvisor'
+
+  - job_name: 'EPM-qa1-42'
+
+    static_configs:
+
+    - targets: ['101.53.142.42:9104']
+
+      labels:
+
+        alias: 'node-exporter'
+
+  - job_name: 'Prod-Kafka-C2-Asset-73'
+
+    static_configs:
+
+    - targets: ['101.53.155.73:8084']
+
+      labels:
+
+        alias: 'cadvisor'
+
+  - job_name: 'Prod-KAFKA-C2-ASSET-73'
+
+    static_configs:
+
+    - targets: ['101.53.155.73:9104']
+
+      labels:
+
+        alias: 'node-exporter'
+   
+  - job_name: 'Prod-Kafka-C3-Asset-78'
+
+    static_configs:
+
+    - targets: ['101.53.155.78:8084']
+
+      labels:
+
+        alias: 'cadvisor'
+
+  - job_name: 'Prod-KAFKA-C3-ASSET-78'
+
+    static_configs:
+
+    - targets: ['101.53.155.78:9104']
+
+      labels:
+
+        alias: 'node-exporter'
+
+  - job_name: 'Prod-Kafka-C1-Asset-195'
+
+    static_configs:
+
+    - targets: ['101.53.156.195:8084']
+
+      labels:
+
+        alias: 'cadvisor'
+
+  - job_name: 'Prod-KAFKA-C1-ASSET-195'
+
+    static_configs:
+
+    - targets: ['101.53.156.195:9104']
+
+      labels:
+
+        alias: 'node-exporter'
+
+  - job_name: 'NewRE-Docker-1-49'
+
+    static_configs:
+
+    - targets: ['164.52.195.49:8084']
+
+      labels:
+
+        alias: 'cadvisor'
+
+  - job_name: 'NEWRE-DOCKER-1-49'
+
+    static_configs:
+
+    - targets: ['164.52.195.49:9104']
+
+      labels:
+
+        alias: 'node-exporter'
+
+  - job_name: 'NewRE-Docker2-52'
+
+    static_configs:
+
+    - targets: ['164.52.195.52:8084']
+
+      labels:
+
+        alias: 'cadvisor'
+
+  - job_name: 'NEWRE-DOCKER2-52'
+
+    static_configs:
+
+    - targets: ['164.52.195.52:9104']
+
+      labels:
+
+        alias: 'node-exporter'
+
+  - job_name: 'QA-Asset-Docker-63'
+
+    static_configs:
+
+    - targets: ['164.52.195.63:8084']
+
+      labels:
+
+        alias: 'cadvisor'
+
+  - job_name: 'QA-ASSET-DOCKER-63'
+
+    static_configs:
+
+    - targets: ['164.52.195.63:9104']
+
+      labels:
+
+        alias: 'node-exporter'
+
+  - job_name: 'Prod-Asset-Docker-1-254'
+
+    static_configs:
+
+    - targets: ['164.52.201.254:8084']
+
+      labels:
+
+        alias: 'cadvisor'
+
+  - job_name: 'Prod-ASSET-DOCKER-1-254'
+
+    static_configs:
+
+    - targets: ['164.52.201.254:9104']
+
+      labels:
+
+        alias: 'node-exporter'
+
+  - job_name: 'Prod-Asset-Docker-2-31'
+
+    static_configs:
+
+    - targets: ['164.52.202.31:8084']
+
+      labels:
+
+        alias: 'cadvisor'
+
+  - job_name: 'Prod-ASSET-DOCKER-2-31'
+
+    static_configs:
+
+    - targets: ['164.52.202.31:9104']
+
+      labels:
+
+        alias: 'node-exporter'
+
+  - job_name: 'Gamesa-FTP-233'
+
+    static_configs:
+
+    - targets: ['101.53.139.233:8084']
+
+      labels:
+
+        alias: 'cadvisor'
+
+  - job_name: 'Gamesa-ftp-233'
+
+    static_configs:
+
+    - targets: ['101.53.139.233:9104']
+
+      labels:
+
+        alias: 'node-exporter'
+
+  - job_name: 'TEST2-SOLAR-66'
+
+    static_configs:
+
+    - targets: ['172.16.0.66:9104']
+
+      labels:
+
+        alias: 'node-exporter'
+
+  - job_name: 'Test2-Solar-66'
+
+    static_configs:
+
+    - targets: ['172.16.0.66:8084']
+
+      labels:
+
+        alias: 'cadvisor'
+
+  - job_name: 'SncServer-67'
+
+    static_configs:
+
+    - targets: ['172.16.0.67:9104']
+
+      labels:
+
+        alias: 'node-exporter'
+
+  - job_name: 'Snc-Server-67'
+
+    static_configs:
+
+    - targets: ['172.16.0.67:8084']
+
+      labels:
+
+        alias: 'cadvisor'
+
+  - job_name: 'MongoDB-DataNode-2-20'
+
+    static_configs:
+
+    - targets: ['164.52.195.20:9104']
+
+      labels:
+
+        alias: 'node-exporter'
+
+  - job_name: 'MONGODB-dataNode2-20'
+
+    static_configs:
+
+    - targets: ['164.52.195.20:8084']
+
+      labels:
+
+        alias: 'cadvisor'
+
+  - job_name: 'NEWRE-MongoDB-DataNode1-5'
+
+    static_configs:
+
+    - targets: ['164.52.195.5:9104']
+
+      labels:
+
+        alias: 'node-exporter'
+
+  - job_name: 'NewRe-MONGODB-dataNode1-5'
+
+    static_configs:
+
+    - targets: ['164.52.195.5:8084']
+
+      labels:
+
+        alias: 'cadvisor'
+
+  - job_name: 'NEWRE-MongoDB-Router-60'
+
+    static_configs:
+
+    - targets: ['164.52.195.60:9104']
+
+      labels:
+
+        alias: 'node-exporter'
+
+  - job_name: 'NewRe-MONGOdbRouter-60'
+
+    static_configs:
+
+    - targets: ['164.52.195.60:8084']
+
+      labels:
+
+        alias: 'cadvisor'
+
+  - job_name: 'Prod-MongoDB-Router-Asset-12'
+
+    static_configs:
+
+    - targets: ['164.52.202.12:9104']
+
+      labels:
+
+        alias: 'node-exporter'
+
+  - job_name: 'Prod-MonGODBRouter-Asset-12'
+
+    static_configs:
+
+    - targets: ['164.52.202.12:8084']
+
+      labels:
+
+        alias: 'cadvisor'
+
+
+
+
+
